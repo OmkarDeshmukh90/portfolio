@@ -1,3 +1,53 @@
+# Portfolio Website
+
+A modern, responsive portfolio website built with React, TypeScript, and Vite featuring smooth animations and an interactive 3D canvas.
+
+## 🚀 Deployment on Vercel
+
+This project is ready for deployment on Vercel. Follow these steps:
+
+1. **Import the project** to Vercel via the [Vercel Dashboard](https://vercel.com/new)
+2. **Connect your GitHub repository**
+3. Vercel will automatically detect the configuration from `vercel.json`
+4. Click **Deploy**
+
+The build configuration is already set up with:
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install --legacy-peer-deps`
+
+## 🛠️ Local Development
+
+### Install dependencies
+```bash
+npm install --legacy-peer-deps
+```
+
+### Run development server
+```bash
+npm run dev
+```
+
+### Build for production
+```bash
+npm run build
+```
+
+### Preview production build
+```bash
+npm run preview
+```
+
+## 📝 Technical Stack
+
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Framer Motion** - Animations
+- **React Router** - Navigation
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
