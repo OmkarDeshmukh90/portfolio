@@ -1,0 +1,141 @@
+/* ===========================================
+   GLOBAL STYLES - DARK GRAINY THEME
+   =========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import './reset.css';
+@import './variables.css';
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+}
+
+/* ========== GLOBAL NOISE TEXTURE ========== */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* ========== TYPOGRAPHY UTILITIES ========== */
+.heading-display {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+}
+
+.heading-section {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-subtle {
+    color: var(--color-text-subtle);
+}
+
+/* ========== LAYOUT UTILITIES ========== */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.section {
+    padding: var(--section-gap) 0;
+    position: relative;
+    background: #0a0a0a;
+}
+
+/* ========== GLASS EFFECT ========== */
+.glass {
+    background: rgba(15, 15, 20, 0.8);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========== FOCUS STATES ========== */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ========== BACKGROUND GLOW EFFECTS ========== */
+.glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: var(--z-below);
+}
+
+.glow-blob--primary {
+    background: var(--color-primary);
+}
+
+.glow-blob--accent {
+    background: var(--color-accent);
+}
+
+/* ========== SCREEN READER ONLY ========== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-text-muted);
+    /* Brighter gray for visibility */
+    border-radius: var(--radius-full);
+    border: 3px solid var(--color-bg);
+    /* Padding via border */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+    /* White on hover */
+    box-shadow: 0 0 10px rgba(250, 249, 246, 0.3);
+    /* Glow effect */
+}

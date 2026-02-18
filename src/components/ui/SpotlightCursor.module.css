@@ -1,0 +1,14 @@
+/* ===========================================
+   SPOTLIGHT CURSOR STYLES
+   =========================================== */
+
+.spotlight {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    /* Above regular content but below modals/nav overlay if needed */
+    pointer-events: none;
+    /* Crucial: lets clicks pass through */
+    width: 100vw;
+    height: 100vh;
+}
