@@ -2,7 +2,6 @@
    MAIN APPLICATION
    =========================================== */
 
-import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
@@ -18,18 +17,16 @@ import './styles/global.css';
 
 function App() {
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>Omkar | Full Stack Developer</title>
-        <meta name="description" content="Full-stack developer crafting beautiful, functional digital experiences. Specializing in React, TypeScript, and modern web technologies." />
-        <meta name="keywords" content="Omkar, developer, full-stack, react, typescript, portfolio" />
-        <meta property="og:title" content="Omkar | Full Stack Developer" />
-        <meta property="og:description" content="Full-stack developer crafting beautiful digital experiences." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </Helmet>
+    <>
+      <title>Omkar | Full Stack Developer</title>
+      <meta name="description" content="Full-stack developer crafting beautiful, functional digital experiences. Specializing in React, TypeScript, and modern web technologies." />
+      <meta name="keywords" content="Omkar, developer, full-stack, react, typescript, portfolio" />
+      <meta property="og:title" content="Omkar | Full Stack Developer" />
+      <meta property="og:description" content="Full-stack developer crafting beautiful digital experiences." />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
       <Navbar />
       <SpotlightCursor />
@@ -45,7 +42,7 @@ function App() {
       </main>
 
       <Footer />
-    </HelmetProvider>
+    </>
   );
 }
 
