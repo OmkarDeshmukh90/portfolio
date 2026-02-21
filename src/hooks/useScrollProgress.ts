@@ -3,7 +3,7 @@
    =========================================== */
 
 import { useScroll, useTransform, MotionValue } from 'framer-motion';
-import { RefObject } from 'react';
+import type { RefObject } from 'react';
 
 interface ScrollProgressOptions {
     target?: RefObject<HTMLElement | null>;

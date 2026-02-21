@@ -52,7 +52,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export function Creative() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [isInView, setIsInView] = useState(false);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number | undefined>(undefined);
     const rotationRef = useRef({ x: 0, y: 0 }); // Current rotation angles
     const mouseRef = useRef({ x: 0, y: 0 }); // Mouse position relative to center
 
